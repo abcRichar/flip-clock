@@ -8,6 +8,7 @@ function App() {
   const [count, setCounts] = useState("");
   const onChange = (e: any) => {
     setCounts(e.target.value);
+    console.log(e.target.value);
   };
   return (
     <>

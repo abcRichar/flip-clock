@@ -2,7 +2,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === "development"; // 是否是开发模式
+console.log(isDev, "kaifa");
+
 module.exports = {
   entry: path.join(__dirname, "./src/index.tsx"), // 入口文件
   output: {
@@ -23,7 +26,7 @@ module.exports = {
       //   use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
       // },
       {
-        test: /.\css$/, //匹配所有的 css 文件
+        test: /.css$/, //匹配所有的 css 文件
         include: [path.resolve(__dirname, "./src")],
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader, // 开发环境使用style-looader,打包模式抽离css
@@ -32,10 +35,10 @@ module.exports = {
         ],
       },
       {
-        test: /.\less$/, //匹配所有的 less 文件
+        test: /.less$/, //匹配所有的 less 文件
         include: [path.resolve(__dirname, "./src")],
         use: [
-          isDev ? "style-loader" : MiniCssExtractPlugin.loader, // 开发环境使用style-looader,打包模式抽离css,
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader, // 开发环境使用style-looader,打包模式抽离css
           "css-loader",
           "postcss-loader",
           "less-loader",
