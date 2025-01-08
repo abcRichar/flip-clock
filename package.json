@@ -1,18 +1,18 @@
 {
-  "name": "filp-clock",
+  "name": "react-webpack-ts-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c webpack.dev.js",
-    "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack-dev-server -c webpack.dev.js",
-    "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack-dev-server -c webpack.dev.js",
-    "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack-dev-server -c webpack.dev.js",
-    "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c webpack.prod.js",
-    "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c webpack.prod.js",
-    "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c webpack.prod.js",
-    "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c webpack.prod.js",
-    "build:analy": "cross-env NODE_ENV=production BASE_ENV=production webpack -c webpack.analy.js"
+    "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c ./build/webpack.dev.js",
+    "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack-dev-server -c ./build/webpack.dev.js",
+    "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack-dev-server -c ./build/webpack.dev.js",
+    "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack-dev-server -c ./build/webpack.dev.js",
+    "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c ./build/webpack.prod.js",
+    "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c ./build/webpack.prod.js",
+    "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c ./build/webpack.prod.js",
+    "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c ./build/webpack.prod.js",
+    "build:analy": "cross-env NODE_ENV=production BASE_ENV=production webpack -c ./build/webpack.analy.js"
   },
   "keywords": [],
   "author": "",
